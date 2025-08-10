@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オピオイド換算アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>オピオイド換算</h1>
+        <form id="conversion-form">
+            <div class="form-group">
+                <label for="drug_before_name">変更前の薬剤名</label>
+                <input type="text" id="drug_before_name" required placeholder="例: ナルサス">
+            </div>
+            <div class="form-group">
+                <label for="drug_before_dose_mg">変更前の投与量(mg)</label>
+                <input type="text" id="drug_before_dose_mg" required placeholder="例: 6">
+            </div>
+            <div class="form-group">
+                <label for="drug_after_name">変更後の薬剤名</label>
+                <input type="text" id="drug_after_name" required placeholder="例: ナルベイン">
+            </div>
+            <button type="submit" id="submit-button">換算実行</button>
+        </form>
+        <div id="loading" style="display: none;">
+            <p>計算中...</p>
+        </div>
+        <div class="result-container">
+            <h2>換算結果</h2>
+            <ul id="result-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
